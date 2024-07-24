@@ -8,8 +8,8 @@ const Login = () => {
   const onFinish = (values) => {
     axios.post('http://127.0.0.1:8000/api/login', values)
       .then(response => {
-        console.log('response:', response);
-
+        // console.log('response:', response);
+        navigate('/')
         notification.success({
           message: response.data.message,
           description: `Welcome back`,
