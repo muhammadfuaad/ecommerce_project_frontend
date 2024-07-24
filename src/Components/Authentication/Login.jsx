@@ -1,12 +1,13 @@
 import { Button, Checkbox, Form, Input, notification } from 'antd';
-import axios from 'axios';
+// import axios from 'axios';
 import { useNavigate } from 'react-router';
+import axiosInstance from '../../utils/callAxios';
 
 const Login = () => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    axios.post('http://127.0.0.1:8000/api/login', values)
+    axiosInstance.post('http://127.0.0.1:8000/api/login', values)
       .then(response => {
         // console.log('response:', response);
         navigate('/')

@@ -1,6 +1,6 @@
 import { Button, Form, Input, notification } from 'antd';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import axiosInstance from '../../utils/callAxios';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Register = () => {
     } else if (password.length < 8) {
       notification.error({message: "Password should be at least 8 characters long"})
     } else {
-      (axios.post('http://127.0.0.1:8000/api/signup', values)
+      (axiosInstance.post('/api/signup', values)
       .then(response => {
         console.log('response:', response);
         navigate('/login')
