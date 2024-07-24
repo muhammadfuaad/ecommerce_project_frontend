@@ -14,7 +14,7 @@ const { Search } = Input;
 
 const Header = () => {
   return (
-    <div className="flex justify-around p-5 border border-green-500">
+    <div className="flex justify-around p-5 ">
       <h1
       className="text-3xl"
       style={{
@@ -41,8 +41,8 @@ const Header = () => {
             <span>
               <HeartTwoTone twoToneColor="#eb2f96" />
             </span>
-            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-2 translate-y-full left-1/2 -translate-x-1/2">
-              <span class="text-zinc-400 whitespace-nowrap">Wish List</span>
+            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-0 translate-y-full left-1/2 -translate-x-1/2">
+              <span class="text-white whitespace-nowrap text-sm">Wish List</span>
               <div class="bg-inherit rotate-45 p-1 absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
             </div>
           </div>
@@ -53,8 +53,8 @@ const Header = () => {
             <span>
               <IconFont type="icon-shoppingcart" />
             </span>
-            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-2 translate-y-full left-1/2 -translate-x-1/2">
-              <span class="text-zinc-400 whitespace-nowrap">Cart</span>
+            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-0 translate-y-full left-1/2 -translate-x-1/2">
+              <span class="text-white whitespace-nowrap text-sm">Cart</span>
               <div class="bg-inherit rotate-45 p-1 absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
             </div>
           </div>
@@ -70,8 +70,8 @@ const Header = () => {
             <span>
               <UserOutlined />
             </span>
-            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-2 translate-y-full left-1/2 -translate-x-1/2">
-              <span class="text-zinc-400 whitespace-nowrap">Account</span>
+            <div class="bg-zinc-800 p-2 rounded-md group-hover:flex hidden absolute -bottom-0 translate-y-full left-1/2 -translate-x-1/2">
+              <span class="text-white whitespace-nowrap text-sm">Account</span>
               <div class="bg-inherit rotate-45 p-1 absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
             </div>
           </div>
