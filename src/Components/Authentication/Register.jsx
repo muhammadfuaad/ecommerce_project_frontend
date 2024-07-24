@@ -31,7 +31,7 @@ const Register = () => {
   };
 
   return (
-    <div className='bg-gray-300 p-12 rounded-xl'>
+    <div className='bg-gray-300 p-12 rounded-xl w-1/2 flex flex-col justify-center items-center m-auto'>
       <h2 className='font-bold text-2xl mb-16'>Register</h2>
       <Form
         name="basic"
