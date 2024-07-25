@@ -3,6 +3,7 @@ import Categories from '../Categories/Categories'
 import Header from '../Header/Header'
 import Navbar from '../Navbar/Navbar'
 import HeadSection from '../HeadSection/HeadSection'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar/>
       <HeadSection/>
       <Categories />
+      <Footer />
     </div>
   )
 }
