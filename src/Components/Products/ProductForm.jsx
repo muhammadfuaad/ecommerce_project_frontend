@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react';
 const ProductForm = () => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([])
+  const [selectedCategoryId, setSelectedCategoryId] = useState("")
+  const [formValues, setFormValues] = useState({})
 
   useEffect(()=>{
     axiosInstance.get('/category')
@@ -23,11 +25,17 @@ const ProductForm = () => {
 
   useEffect(()=>{
     console.log('categories:', categories);
-  }, [categories])
-  
+    console.log('selectedCategoryId:', selectedCategoryId);
+
+  }, [categories, selectedCategoryId])
 
   const onFinish = (values) => {
-    axiosInstance.post('/category', values)
+    console.log('values:', values);
+    const newFormValues = {...values, category: selectedCategoryId}
+    setFormValues(newFormValues)
+    console.log('formValues:', formValues);
+    
+    axiosInstance.post('/category', formValues)
       .then(response => {
         // console.log('response:', response);
         navigate('/')
@@ -51,24 +59,19 @@ const ProductForm = () => {
   };
 
   const handleMenuClick = (e) => {
-    console.log('click', e);
+    console.log('click', e.key);
+    const index = e.key
+    const selectedCategory = categories[index]
+    console.log('selectedCategory:', selectedCategory);
+    setSelectedCategoryId(selectedCategory._id)    
   };
 
-  const items = [
-    {
-      label: '1st menu item',
-      key: '1',
-    },
-    {
-      label: '2nd menu item',
-      key: '2',
-    },
-    {
-      label: '3rd menu item',
-      key: '3',
-      danger: true,
-    },
-  ];
+  const items = categories.map((category, index)=>{
+    return {
+      label: category.name,
+      key: index
+    }
+  })
   
   const menuProps = {
     items,
