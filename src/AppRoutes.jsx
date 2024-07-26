@@ -5,6 +5,8 @@ import Register from './Components/Authentication/Register'
 import Login from './Components/Authentication/Login'
 import Categories from './Components/Categories/Categories'
 import Home from './Components/Home/Home'
+import CategoryForm from './Components/Categories/CategoryForm'
+import ProductForm from './Components/Products/ProductForm'
 
 function AppRoutes() {
 
@@ -15,7 +17,11 @@ function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Categories" element={<Categories />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/categories/add_new" element={<CategoryForm />} />
+          <Route path="/products/add_new" element={<ProductForm />} />
+
+
         </Routes>
       </BrowserRouter>
     </>
