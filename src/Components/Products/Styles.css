@@ -1,0 +1,40 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.product-stock {
+  font-size: 0.8em;
+  color: #555;
+}

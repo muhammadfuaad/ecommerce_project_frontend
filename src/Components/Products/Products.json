@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Luna Sofa",
+    "price": 799.99,
+    "description": "A modern, comfortable three-seater sofa with sleek lines and a minimalist design.",
+    "stock": 10,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/luna-sofa.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  },
+  {
+    "name": "Aurora Dining Table",
+    "price": 499.99,
+    "description": "A stylish and sturdy wooden dining table with a natural finish, accommodating up to six people.",
+    "stock": 15,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/aurora-dining-table.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  },
+  {
+    "name": "Orion Coffee Table",
+    "price": 199.99,
+    "description": "A chic coffee table featuring a tempered glass top and a geometric metal frame.",
+    "stock": 20,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/orion-coffee-table.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  },
+  {
+    "name": "Vega Bookshelf",
+    "price": 149.99,
+    "description": "A versatile and spacious bookshelf with five open shelves, offering ample storage for books and decor.",
+    "stock": 25,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/vega-bookshelf.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  },
+  {
+    "name": "Sirius Bed Frame",
+    "price": 899.99,
+    "description": "A luxurious queen-sized bed frame with a tufted upholstered headboard and a solid wooden base.",
+    "stock": 8,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/sirius-bed-frame.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  },
+  {
+    "name": "Polaris Office Chair",
+    "price": 249.99,
+    "description": "An ergonomic office chair with adjustable height, lumbar support, and breathable mesh back.",
+    "stock": 30,
+    "category": "66a3b8604df1a0b0e537e66b",
+    "image": "https://example.com/images/polaris-office-chair.jpg",
+    "createdAt": "2024-07-27T00:00:00Z"
+  }
+]
