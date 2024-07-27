@@ -1,5 +1,5 @@
-import { Button, Form, Input, notification, Space, Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import { Button, Form, Input, notification, Space, Dropdown, Upload } from 'antd';
+import { DownOutlined, UploadOutlined } from '@ant-design/icons';
 // import axios from 'axios';
 import { useNavigate } from 'react-router';
 import axiosInstance from '../../utils/callAxios';
@@ -10,6 +10,7 @@ const ProductForm = () => {
   const [categories, setCategories] = useState([])
   const [selectedCategoryId, setSelectedCategoryId] = useState("")
   const [formValues, setFormValues] = useState({})
+  const [selectedCategoryName, setSelectedCategoryName] = useState("")
 
   useEffect(()=>{
     axiosInstance.get('/category')
@@ -23,11 +24,12 @@ const ProductForm = () => {
   }, [])
   
 
-  useEffect(()=>{
-    console.log('categories:', categories);
-    console.log('selectedCategoryId:', selectedCategoryId);
+  // useEffect(()=>{
+  //   console.log('categories:', categories);
+  //   console.log('selectedCategoryId:', selectedCategoryId);
+  //   console.log('selectedCategoryName:', selectedCategoryName);
 
-  }, [categories, selectedCategoryId])
+  // }, [categories, selectedCategoryId, selectedCategoryName])
 
   const onFinish = (values) => {
     console.log('values:', values);
@@ -35,7 +37,7 @@ const ProductForm = () => {
     setFormValues(newFormValues)
     console.log('formValues:', formValues);
     
-    axiosInstance.post('/category', formValues)
+    axiosInstance.post('/product', formValues)
       .then(response => {
         // console.log('response:', response);
         navigate('/')
@@ -63,7 +65,8 @@ const ProductForm = () => {
     const index = e.key
     const selectedCategory = categories[index]
     console.log('selectedCategory:', selectedCategory);
-    setSelectedCategoryId(selectedCategory._id)    
+    setSelectedCategoryId(selectedCategory._id)   
+    setSelectedCategoryName(selectedCategory.name) 
   };
 
   const items = categories.map((category, index)=>{
@@ -124,17 +127,25 @@ const ProductForm = () => {
           <Form.Item
             label="Category"
             name="category"
-            rules={[{ required: true, message: 'Please input product category!' }]}
+            // rules={[{ required: true, message: 'Please input product category!' }]}
           >
             <Dropdown menu={menuProps}>
               <Button>
                 <Space>
-                  Button
+                  {selectedCategoryName !== "" ? selectedCategoryName : "Selecet Category"}
                   <DownOutlined />
                 </Space>
               </Button>
             </Dropdown>
-            
+          </Form.Item>
+          <Form.Item
+            label="Image"
+            name="image"
+            rules={[{ required: true, message: 'Please input product image!' }]}
+          >
+            <Upload>
+              <Button icon={<UploadOutlined />}>Upload Image</Button>
+            </Upload>
           </Form.Item>
           
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
