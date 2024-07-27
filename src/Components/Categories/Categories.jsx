@@ -19,7 +19,7 @@ const categories = [
   { name: 'Kitchen', image: img6 }
 ];
 
-const Category = () => {
+const Categories = () => {
   return (
     <div className='w-full flex justify-center'>
     <div className="category-container">
@@ -40,4 +40,4 @@ const Category = () => {
   );
 }
 
-export default Category;
+export default Categories;

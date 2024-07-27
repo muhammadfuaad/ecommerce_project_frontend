@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Office Furniture",
+    "description": "Designed for use in workplaces, this category includes desks, office chairs, filing cabinets, and conference tables. Office furniture focuses on functionality, ergonomics, and professional aesthetics to create a productive work environment."
+  },
+  {
+    "name": "Home Furniture",
+    "description": "This category covers a wide range of furniture used in residential settings, such as sofas, beds, dining tables, chairs, and storage solutions. Home furniture emphasizes comfort, style, and personalization to suit various interior design preferences."
+  },
+  {
+    "name": "Restaurant Furniture",
+    "description": "Catering to the hospitality industry, restaurant furniture includes dining tables, chairs, bar stools, and booths. It is designed for durability and ease of maintenance while complementing the restaurant's ambiance and theme."
+  },
+  {
+    "name": "Outdoor Furniture",
+    "description": "Also known as patio or garden furniture, this category includes items like outdoor dining sets, lounge chairs, benches, and umbrellas. Outdoor furniture is built to withstand weather conditions and provide comfort for outdoor relaxation and entertainment."
+  },
+  {
+    "name": "Bedroom Furniture",
+    "description": "Focused on creating a restful and organized sleeping environment, bedroom furniture includes beds, nightstands, dressers, wardrobes, and bedding accessories. It prioritizes comfort, storage, and aesthetic appeal."
+  },
+  {
+    "name": "Living Room Furniture",
+    "description": "Designed for the main social space in a home, living room furniture includes sofas, coffee tables, TV stands, and accent chairs. It balances comfort and style to accommodate both relaxation and entertainment needs."
+  }
+]

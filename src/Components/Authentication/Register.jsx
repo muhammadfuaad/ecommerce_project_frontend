@@ -16,7 +16,7 @@ const Register = () => {
     } else if (password.length < 8) {
       notification.error({message: "Password should be at least 8 characters long"})
     } else {
-      (axiosInstance.post('/api/signup', values)
+      (axiosInstance.post('/signup', values)
       .then(response => {
         console.log('response:', response);
         navigate('/login')
