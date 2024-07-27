@@ -3,10 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Register from './Components/Authentication/Register'
 import Login from './Components/Authentication/Login'
-import Categories from './Components/Categories/Categories'
 import Home from './Components/Home/Home'
 import CategoryForm from './Components/Categories/CategoryForm'
 import ProductForm from './Components/Products/ProductForm'
+import Category from './Components/Categories/Categories'
+import CategoryPage from './Components/Categories/CategoryPage'
+import Categories from './Components/Categories/Categories'
 
 function AppRoutes() {
 
@@ -22,6 +24,8 @@ function AppRoutes() {
           <Route path="/products/add_new" element={<ProductForm />} />
 
 
+          <Route exact path="category" component={Category} />
+          <Route path="/category/:name" component={CategoryPage} />
         </Routes>
       </BrowserRouter>
     </>
