@@ -17,17 +17,26 @@ const Products = () => {
   }, [])
   
   return (
-    <div className="product-list">
-      {products.map((product, index) => (
-        <div key={index} className="product-card">
-          <img src={product.image} alt={product.name} className="product-image" />
-          <h2 className="product-name">{product.name}</h2>
-          <p className="product-price">${product.price.toFixed(2)}</p>
-          <p className="product-description">{product.description}</p>
-          <p className="product-stock">Stock: {product.stock}</p>
-        </div>
-      ))}
+    <div className='flex justify-center w-full'>
+    <div className="product-grid">
+      <h2>RECOMMENDED FOR YOU</h2>
+      <div className="grid">
+        {products.map(product => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p className="price">
+              <span className="new-price">${product.price.toFixed(2)}</span>
+            </p>
+            <p className="rating">
+              {'★'.repeat(product.rating)} <span>({product.reviews})</span>
+            </p>
+            <button>Add to cart</button>
+          </div>
+        ))}
+      </div>
     </div>
+     </div>
   );
 };
 
