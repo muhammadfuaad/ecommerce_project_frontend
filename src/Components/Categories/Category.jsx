@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import axiosInstance from '../../utils/callAxios';
+import Product from '../Products/Product';
 
 const Category = () => {
   const [products, setProducts] =useState([])
@@ -19,9 +20,9 @@ const Category = () => {
   return (
     <div>
       <h1>{categoryName} Category</h1>
-      {products.map((product)=>{
+      {products.map((product, index)=>{
         return (
-          <>{product.name}</>
+          <Product product = {product} key={index}/>
         )
       })}
     </div>
