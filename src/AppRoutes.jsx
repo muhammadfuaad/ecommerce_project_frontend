@@ -6,10 +6,11 @@ import Login from './Components/Authentication/Login'
 import Home from './Components/Home/Home'
 import CategoryForm from './Components/Categories/CategoryForm'
 import ProductForm from './Components/Products/ProductForm'
-import Category from './Components/Categories/Categories'
-import CategoryPage from './Components/Categories/CategoryPage'
+// import Category from './Components/Categories/Categories'
+import Category from './Components/Categories/Category'
 import Categories from './Components/Categories/Categories'
 import Products from './Components/Products/Products'
+import Product from './Components/Products/Product'
 
 function AppRoutes() {
 
@@ -24,11 +25,13 @@ function AppRoutes() {
           <Route path="/categories/add_new" element={<CategoryForm />} />
           <Route path="/products/add_new" element={<ProductForm />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product" element={<Product />} />
 
 
+          <Route path="/category/:categoryName" element={<Category />} />
 
-          <Route exact path="category" component={Category} />
-          <Route path="/category/:name" component={CategoryPage} />
+          {/* <Route exact path="category" component={Category} />
+          <Route path="/category/:name" component={Category} /> */}
         </Routes>
       </BrowserRouter>
     </>
