@@ -28,10 +28,10 @@ function AppRoutes() {
           <Route path="/product" element={<Product />} />
 
 
+          <Route path="/category/:categoryName" element={<Category />} />
 
-
-          <Route exact path="category" component={Category} />
-          <Route path="/category/:name" component={Category} />
+          {/* <Route exact path="category" component={Category} />
+          <Route path="/category/:name" component={Category} /> */}
         </Routes>
       </BrowserRouter>
     </>
