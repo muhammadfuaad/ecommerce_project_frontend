@@ -54,21 +54,13 @@ const ProductForm = () => {
     console.log('click', e);
   };
 
-  const items = [
-    {
-      label: '1st menu item',
-      key: '1',
-    },
-    {
-      label: '2nd menu item',
-      key: '2',
-    },
-    {
-      label: '3rd menu item',
-      key: '3',
-      danger: true,
-    },
-  ];
+  const items = categories.map((category, index)=>{
+    return {
+      label: category.name,
+      key: (index+1)
+    }
+  })
+  console.log('items:', items);
   
   const menuProps = {
     items,
