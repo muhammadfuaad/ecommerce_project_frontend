@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react';
 const ProductForm = () => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([])
+  const [selectedCategoryId, setSelectedCategoryId] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState({})
 
   useEffect(()=>{
     axiosInstance.get('/category')
@@ -27,7 +29,7 @@ const ProductForm = () => {
   
 
   const onFinish = (values) => {
-    axiosInstance.post('/category', values)
+    axiosInstance.post('/product', {...values, category: selectedCategoryId})
       .then(response => {
         // console.log('response:', response);
         navigate('/')
@@ -52,6 +54,14 @@ const ProductForm = () => {
 
   const handleMenuClick = (e) => {
     console.log('click', e);
+    const index = e.key - 1
+    console.log('index:', index);
+    const category = categories[index]
+    setSelectedCategory(category)
+    console.log('selectedCategory:', selectedCategory);
+    const id = selectedCategory._id
+    setSelectedCategoryId(id)
+    console.log('selectedCategoryId:', selectedCategoryId);
   };
 
   const items = categories.map((category, index)=>{
@@ -66,6 +76,7 @@ const ProductForm = () => {
     items,
     onClick: handleMenuClick,
   };
+  console.log('selectedCategory:', selectedCategory);
   
 
   return (
@@ -113,12 +124,12 @@ const ProductForm = () => {
           <Form.Item
             label="Category"
             name="category"
-            rules={[{ required: true, message: 'Please input product category!' }]}
+            // rules={[{ required: true, message: 'Please input product category!' }]}
           >
             <Dropdown menu={menuProps}>
               <Button>
                 <Space>
-                  Button
+                  {selectedCategory == {} ? "Select Category" : selectedCategory.name}
                   <DownOutlined />
                 </Space>
               </Button>
