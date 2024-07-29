@@ -40,7 +40,7 @@ const Categories = () => {
       <h1 className='flex flex-start pl-4'>SHOP BY CATEGORY</h1>
       <div className="category-grid">
         {categories.map((category) => (
-          <Link to={`/category/${category.name}`} key={category.name}>
+          <Link to={`/category/${category.name}`} key={category.name} state = {{categoryId: category._id}}>
             <div className="category-item" style={{ backgroundImage: `url(${category.image})` }}>
               <div className="category-name">{category.name}</div>
             </div>
