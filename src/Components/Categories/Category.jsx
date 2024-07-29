@@ -1,7 +1,6 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const CategoryPage = () => {
+const Category = () => {
   const { name } = useParams();
 
   // Fetch the items for this category from your API or state
@@ -23,4 +22,4 @@ const CategoryPage = () => {
   );
 }
 
-export default CategoryPage;
+export default Category;

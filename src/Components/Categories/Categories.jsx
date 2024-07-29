@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Category.css';
 
@@ -8,7 +7,7 @@ import img2 from '../Images/mattress.jpg';
 import img3 from '../Images/out door.jpg';
 import img4 from '../Images/Header.jpg';
 import img5 from '../Images/living room.jpg';
- import img6 from '../Images/kitchen1.jpeg';
+import img6 from '../Images/kitchen1.jpeg';
 
 const categories = [
   { name: 'Bedroom', image: img1 },
